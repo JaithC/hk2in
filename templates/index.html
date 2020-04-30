@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Office 365 子号自助开通</title>
+    <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css">
+    <link href="https://i.loli.net/2020/01/25/mHyKw936UxpEM1Y.png" rel="icon" type="image/png">
+    <style>
+        .intro {
+            background: url('https://i.loli.net/2020/01/25/KEScJXCBfAzaIjW.png') no-repeat;
+            background-size: cover
+        }
+    </style>
+    <style>
+        .create-wait {
+            display: none;
+            position: absolute;
+            z-index: 999;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            top: 0
+        }
+        .red {
+            color: red;
+        }
+        .create-wait .mdui-valign {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+    <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+</head>
+<body>
+<div id="fullpage">
+        <div class="section intro">
+            <div class="mdui-appbar mdui-appbar-fixed mdui-color-white">
+                <div class="mdui-toolbar">
+                    <a href="javascript:;" class="mdui-typo-headline">Office 365 子号自助开通</a>
+                    <div class="mdui-toolbar-spacer"></div>
+                </div>
+            </div>
+            <div class="mdui-text-color-white-text" align="center" style="width: 70%;margin: auto">
+                <img src="https://i.loli.net/2020/01/25/LF2q4bBN3rCMcDt.png" style="width: 250px">
+                <h1 style="font-size: 40px;font-weight: 500">Office 365 子号自助开通</h1>
+                <h1 style="font-size: 30px;font-weight: 500">此全局订阅为<s>你管那么多干啥</s></h1>
+                <h1 style="font-size: 30px;font-weight: 500">(白嫖不就完事了)</h1>
+                <br><br><br><br>
+                <a href="#form"><button class="mdui-btn mdui-ripple mdui-color-red mdui-m-a-2" style="width: 140px;height: 50px">立即获取</button></a>
+                <a href="https://www.office.com/login"><button class="mdui-m-a-2 mdui-btn mdui-ripple mdui-color-white" style="width: 140px;height: 50px">登录</button></a>
+            </div>
+        </div>
+        <div class="section form">
+            <div class="create-wait">
+                <div class="mdui-valign">
+                    <div class="mdui-spinner mdui-spinner-colorful mdui-center"></div>
+                </div>
+            </div>
+            <div class="mdui-container">
+                <div class="mdui-row">
+                    <h2 style="font-size: 40px;font-weight: 500" id="aform">Office 365 子号自助开通</h2>
+                    <form id="aform">
+                        <div class="mdui-textfield mdui-textfield-floating-label">
+                            <label class="mdui-textfield-label">姓/Lastname <span class="red">*</span></label>
+                            <input class="mdui-textfield-input" type="text" name="lastname" pattern="[A-z0-9]{1,10}" required>
+                            <div class="mdui-textfield-error">英文/拼音</div>
+                        </div>
+                        <div class="mdui-textfield mdui-textfield-floating-label">
+                            <label class="mdui-textfield-label">名/Firstname <span class="red">*</span></label>
+                            <input class="mdui-textfield-input" type="text" name="firstname" pattern="[A-z0-9]{1,10}" required>
+                            <div class="mdui-textfield-error">英文/拼音</div>
+                        </div>
+                        <div class="mdui-textfield mdui-textfield-floating-label">
+                            <label class="mdui-textfield-label">邮箱前缀 <span class="red">*</span></label>
+                            <input class="mdui-textfield-input" type="text" name="username" pattern="[A-z0-9]{1,50}" required>
+                            <div class="mdui-textfield-error">@ 前面的字符，允许字母/数字</div>
+                        </div>
+                        <!--<button id="TencentCaptcha"
+                                data-appid="2020037560"
+                                data-cbfn="tencent"
+                                type="button"
+                                class="mdui-btn mdui-btn-raised mdui-color-blue"
+                                style="display: block; color: white!important;">
+                            验证您是正常人类
+                        </button>-->
+                        <input id="post" type="submit" class="mdui-btn mdui-btn-raised mdui-color-yellow" style="margin-top: 20px" value="提交">
+                        <div style="margin-top: 20px; color: gray"><span class="red">重要!</span> &nbsp;提交后账户信息将显示在网页上，请勿刷新</div>
+                    </form>
+                    <div class="ainfo" style="display: none">
+                        <h2 style="font-size: 30px;font-weight: 500">Office 365 子号创建成功！</h2>
+                        <label class="mdui-textfield-label">邮箱</label>
+                        <input class="mdui-textfield-input cremail" type="text" value="">
+                        <label class="mdui-textfield-label">初始密码</label>
+                        <input class="mdui-textfield-input crpass" type="text" value="">
+                        <a href="https://www.office.com/login" target="_blank"><button class="mdui-m-t-4 mdui-btn mdui-ripple mdui-color-red" style="width: 140px;height: 50px">前往登录</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/vendors/scrolloverflow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#post').attr("disabled", false);
+            $('#fullpage').fullpage({
+                anchors: ['intro', 'form'],
+                scrollOverflow: true,
+                verticalCentered: true
+            });
+        });
+    </script>
+    <script>
+        let ticket;
+        $('form').submit(function(e) {
+            e.preventDefault();
+            mdui.dialog({
+                title: '创建账号',
+                content: '点击确认后开始创建账号，请耐心等待，勿刷新网页',
+                buttons: [{
+                    text: '取消'
+                }, {
+                    text: '确认',
+                    onClick: function(inst) {
+                        /*if (ticket === undefined){
+                            return alert("您无权上车, 车门都焊死了!");
+                        }*/
+                        $('#post').attr("disabled", true);
+                        $('.create-wait').show();
+                        $.ajax({
+                            type: "POST",
+                            url: "/createUser",
+                            data: JSON.stringify({
+                                lastname: e.target['lastname'].value.trim(),
+                                firstname: e.target['firstname'].value.trim(),
+                                username: e.target['username'].value.trim(),
+                                t_ticket: ticket
+                            }),
+                            success: function(res) {
+                                $('#post').attr("disabled", false);
+                                $('.create-wait').hide();
+                                var response = JSON.parse(res);
+                                if (response.stat == 'success') {
+                                    $('.cremail').val(response.email);
+                                    $('.crpass').val(response.password);
+                                    $('form').hide();
+                                    $('.mdui-row>h2').hide();
+                                    $('.ainfo').show();
+                                } else if (response.stat == 'username exists') {
+                                    mdui.alert('创建失败，前缀已被占用');
+                                } else {
+                                    JSON.stringify(response);
+                                }
+                            },
+                            contentType: "application/json"
+                        });
+                    }
+                }]
+            });
+        });
+        function tencent(res) {
+            console.log(res)
+            // res（用户主动关闭验证码）= {ret: 2, ticket: null}
+            // res（验证成功） = {ret: 0, ticket: "String", randstr: "String"}
+            if(res.ret === 0){
+                $('#post').attr("disabled", false);
+                ticket = res.ticket   // 票据
+            } else {
+                $('#post').attr("disabled", true);
+            }
+        }
+    </script>
+</body>
+</html>
