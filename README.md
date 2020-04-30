@@ -10,4 +10,13 @@
 
 3 获取订阅的 skuid，自行谷歌一下方法吧，用powershell之类的
 
+![image.png](https://raw.githubusercontent.com/365a1/hk2in/master/001.png)
+![image.png](https://raw.githubusercontent.com/365a1/hk2in/master/002.png)
+![image.png](https://raw.githubusercontent.com/365a1/hk2in/master/003.png)
+![image.png](https://raw.githubusercontent.com/365a1/hk2in/master/004.png)
+![image.png](https://raw.githubusercontent.com/365a1/hk2in/master/005.png)
+![image.png](https://raw.githubusercontent.com/365a1/hk2in/master/006.png)
+![image.png](https://raw.githubusercontent.com/365a1/hk2in/master/007.png)
+![image.png](https://raw.githubusercontent.com/365a1/hk2in/master/ftp1.png)
+![image.png](https://raw.githubusercontent.com/365a1/hk2in/master/ftp2.png)
 
